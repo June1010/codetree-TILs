@@ -20,11 +20,11 @@ public class Main {
         int sum = 0;
         int j = 0;
         for (int i = 0; i < N; i++) {
-            while (j < N && sum + arr[j] <= M) {
+            while (j < N && sum + arr[j] < M) {
                 sum += arr[j];
                 j++;
             }
-
+            // System.out.println("" + i + " " + j + " " +(j-i+1));
             ans = Math.min(ans, j-i+1);
             sum -= arr[i];
         }
